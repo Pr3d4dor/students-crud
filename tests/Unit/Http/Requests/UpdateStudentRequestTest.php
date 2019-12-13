@@ -29,10 +29,6 @@ class UpdateStudentRequestTest extends TestCase
         $faker = Factory::create(Factory::DEFAULT_LOCALE);
 
         return [
-            'request_should_fail_when_no_data_is_provided' => [
-                'passed' => false,
-                'data' => []
-            ],
             'request_should_fail_when_invalid_data_is_provided' => [
                 'passed' => false,
                 'data' => [
