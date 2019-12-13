@@ -18,7 +18,7 @@ $factory->define(Student::class, function (Faker $faker) {
         'city' => $faker->word(),
         'state' => 'PR',
         'mother_name' => $faker->name(),
-        'mother_cpf' => '088.463.559-70',
+        'mother_cpf' => '08846355970',
         'preferred_day_for_monthly_payment' => '5'
     ];
 });
