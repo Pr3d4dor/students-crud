@@ -12,6 +12,7 @@ class CPFTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
+
         $this->cpfRule = new CPF();
     }
 
