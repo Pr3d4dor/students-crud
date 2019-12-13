@@ -31,7 +31,7 @@ class UpdateStudentRequest extends FormRequest
     {
         return [
             'name' => 'required|max:100',
-            'birthdate' => 'required|date',
+            'birthdate' => 'required|date_format:d/m/Y',
             'grade' => ['required', Rule::in(self::GRADES)],
             'postcode' => 'required|max:8',
             'street' => 'required|max:120',
