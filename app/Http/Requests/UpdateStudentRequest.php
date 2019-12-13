@@ -30,19 +30,19 @@ class UpdateStudentRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|max:100',
-            'birthdate' => 'required|date_format:d/m/Y',
-            'grade' => ['required', Rule::in(self::GRADES)],
-            'postcode' => 'required|max:8',
-            'street' => 'required|max:120',
-            'number' => 'required|numeric',
-            'complement' => 'max:50',
-            'neighborhood' => 'required|max:100',
-            'city' => 'required',
-            'state' => ['required', new State()],
-            'mother_name' => 'required|max:100',
-            'mother_cpf' => ['required', new CPF()],
-            'preferred_day_for_monthly_payment' => ['required', new MonthlyPaymentDay()],
+            'name' => 'sometimes|required|max:100',
+            'birthdate' => 'sometimes|required|date_format:d/m/Y',
+            'grade' => ['sometimes', 'required', Rule::in(self::GRADES)],
+            'postcode' => 'sometimes|required|max:8',
+            'street' => 'sometimes|required|max:120',
+            'number' => 'sometimes|required|numeric',
+            'complement' => 'sometimes|max:50',
+            'neighborhood' => 'sometimes|required|max:100',
+            'city' => 'sometimes|required',
+            'state' => ['sometimes', 'required', new State()],
+            'mother_name' => 'sometimes|required|max:100',
+            'mother_cpf' => ['sometimes', 'required', new CPF()],
+            'preferred_day_for_monthly_payment' => ['sometimes', 'required', new MonthlyPaymentDay()],
         ];
     }
 }
