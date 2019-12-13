@@ -1,5 +1,7 @@
 <?php
 
+use Mpociot\ApiDoc\ApiDoc;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+ApiDoc::routes();
+
+Route::get('/', function() {
+    return view('apidoc.index');
 });
