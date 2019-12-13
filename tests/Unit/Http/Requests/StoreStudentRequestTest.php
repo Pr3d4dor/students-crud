@@ -37,7 +37,7 @@ class StoreStudentRequestTest extends TestCase
                 'passed' => false,
                 'data' => [
                     'name' => $faker->name(),
-                    'birthdate' => $faker->date(),
+                    'birthdate' => $faker->date('d/m/Y'),
                     'grade' => 20,
                     'postcode' => '0000000',
                     'street' => '',
@@ -55,7 +55,7 @@ class StoreStudentRequestTest extends TestCase
                 'passed' => true,
                 'data' => [
                     'name' => $faker->name(),
-                    'birthdate' => $faker->date(),
+                    'birthdate' => $faker->date('d/m/Y'),
                     'grade' => $faker->numberBetween(1, 9),
                     'postcode' => '85015310',
                     'street' => $faker->streetAddress,
